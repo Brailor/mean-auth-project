@@ -1,0 +1,23 @@
+<div class="jumbotron text-center">
+  <h1>MEAN Authentication Webapp </h1>
+  <p>Egyszerű JS alapú 'hitelesítő' alkalmazás</p>
+  <div>
+    <a *ngIf="!authService.loggedIn()" class="btn btn-primary" [routerLink] = "['/register']">Regisztráció</a><a *ngIf="!authService.loggedIn()"  class="btn btn-default" [routerLink] = "['/login']">Belépés</a>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4">
+    <h3>Express Backend</h3>
+    <p>A backend Express framework-ön és Node.js környezetben fut.</p>
+  </div>
+  <div class="col-md-4">
+    <h3>Angular-CLI</h3>
+    <p>Az Angular componenteket és serviceke Angular-CLI segítségével könnyedén létre lehet hozni.</p>
+  </div>
+  <div class="col-md-4">
+    <h3>JWT-Tokens</h3>
+    <p>Az hitelesítést segítő JSON web-tokenekkel.</p>
+  </div>
+</div>

@@ -33,6 +33,9 @@ app.use('/users', users);
 app.get('/', function (req, res) {
     res.send('Hibás végcél.');
 });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+})
 app.listen(port, function () {
     console.log('Server started on port ' + port);
 });

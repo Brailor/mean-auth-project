@@ -14,9 +14,9 @@ router.post('/register', function (req, res, next) {
     });
     User.addUser(newUser, function (e, user) {
         if (e)
-            res.json({ succes: false, message: 'Nem sikerült regisztrálni a felhasználót.' });
+            res.json({ success: false, message: 'Nem sikerült regisztrálni a felhasználót.' });
         else
-            res.json({ succes: true, message: 'Sikeres volt a felhasználó regisztráció.' });
+            res.json({ success: true, message: 'Sikeres volt a felhasználó regisztráció.' });
     });
 });
 //Authentikáció
@@ -36,7 +36,7 @@ router.post('/authenticate', function (req, res, next) {
               });
 
               res.json({
-                  succes: true,
+                  success: true,
                   token: 'JWT ' + token,
                   user: {
                       id: user._id,

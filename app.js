@@ -17,7 +17,7 @@ mongoose.connection.on('error', function (e) {
     console.log('Database error:  ' + e);
 });
 var app = express();
-var port = 3000;
+var port =  process.env.PORT || 8080;
 //CORS Middleware
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
